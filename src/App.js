@@ -52,24 +52,24 @@ const average = (arr) =>
 export default function App() {
   const [movies, setMovies] = useState(tempMovieData);
   const [watched, setWatched] = useState(tempWatchedData);
- return (
-   <>
-     <NavBar>
-       <Logo />
-       <Search />
-       <NumResults movies={movies} />
-     </NavBar>
-     <Main>
-       <Box>
-         <MovieList movies={movies} />
-       </Box>
-       <Box>
-         <Summary watched={watched} />
-         <WatchedMovieList watched={watched} />
-       </Box>
-     </Main>
-   </>
- );
+  return (
+    <>
+      <NavBar>
+        <Logo />
+        <Search />
+        <NumResults movies={movies} />
+      </NavBar>
+      <Main>
+        <Box>
+          <MovieList movies={movies} />
+        </Box>
+        <Box>
+          <Summary watched={watched} />
+          <WatchedMovieList watched={watched} />
+        </Box>
+      </Main>
+    </>
+  );
 }
 
 function NavBar({ children }) {
